@@ -212,7 +212,7 @@ function useSelect<TValue, Multiple extends boolean = false>(
           return {
             ...newState,
             highlightedValue:
-              newState.selectedValues.length > 0 ? newState.selectedValues[0] : null,
+              newState.selectedValues.length > 0 ? newState.selectedValues[newState.selectedValues.length - 1] : null,
           };
 
         default:
